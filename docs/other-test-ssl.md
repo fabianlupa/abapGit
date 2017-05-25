@@ -4,7 +4,7 @@ title: ZABAPGIT_TEST_SSL
 
 Following report can be used to test SSL connection to github,
 
-```abap
+{% highlight abap %}
 REPORT zabapgit_test_ssl.
 
 * See https://github.com/larshp/abapGit/
@@ -67,4 +67,4 @@ FORM run.
   ENDIF.
 
 ENDFORM.
-```
+{% endhighlight %}
