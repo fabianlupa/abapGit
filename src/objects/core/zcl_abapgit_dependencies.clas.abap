@@ -60,8 +60,10 @@ CLASS zcl_abapgit_dependencies IMPLEMENTATION.
     ls_ddls_name-name = iv_ddls_name.
     INSERT ls_ddls_name INTO TABLE lt_ddls_name.
 
-    PERFORM ('DDLS_GET_DEP') IN PROGRAM ('RADMASDL')
-                             TABLES lt_ddls_name rt_dependency.
+    PERFORM ddls_get_dep
+      IN PROGRAM radmasdl
+      TABLES lt_ddls_name                  " ddlsnames
+             rt_dependency ##PERF_NO_FORM. " deptab
 
   ENDMETHOD.
 
